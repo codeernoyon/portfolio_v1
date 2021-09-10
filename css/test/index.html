@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+
+        <div class="cardList">
+            <button class="cardList__btn btn btn--left">
+                <div class="icon">
+                    <svg>
+                        <use xlink:href="#arrow-left"></use>
+                    </svg>
+                </div>
+            </button>
+    
+            <div class="cards__wrapper">
+                <div class="card current--card">
+                    <div class="card__image">
+                        <img src="https://source.unsplash.com/Z8dtTatMVMw" alt="" />
+                    </div>
+                </div>
+    
+                <div class="card next--card">
+                    <div class="card__image">
+                        <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="" />
+                    </div>
+                </div>
+    
+                <div class="card previous--card">
+                    <div class="card__image">
+                        <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" />
+                    </div>
+                </div>
+            </div>
+    
+            <button class="cardList__btn btn btn--right">
+                <div class="icon">
+                    <svg>
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </div>
+            </button>
+        </div>
+    
+        <div class="infoList">
+            <div class="info__wrapper">
+                <div class="info current--info">
+                    <h1 class="text name">Highlands</h1>
+                    <h4 class="text location">Scotland</h4>
+                    <p class="text description">The mountains are calling</p>
+                </div>
+    
+                <div class="info next--info">
+                    <h1 class="text name">Machu Pichu</h1>
+                    <h4 class="text location">Peru</h4>
+                    <p class="text description">Adventure is never far away</p>
+                </div>
+    
+                <div class="info previous--info">
+                    <h1 class="text name">Chamonix</h1>
+                    <h4 class="text location">France</h4>
+                    <p class="text description">Let your dreams come true</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="app__bg">
+            <div class="app__bg__image current--image">
+                <img src="https://source.unsplash.com/Z8dtTatMVMw" alt="" />
+            </div>
+            <div class="app__bg__image next--image">
+                <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="" />
+            </div>
+            <div class="app__bg__image previous--image">
+                <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" />
+            </div>
+        </div>
+    </div>
+    
+    <div class="loading__wrapper">
+        <div class="loader--text">Loading...</div>
+        <div class="loader">
+            <span></span>
+        </div>
+    </div>
+    
+    <svg class="icons" style="display: none;">
+        <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+            <polyline points='328 112 184 256 328 400' style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+        </symbol>
+        <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+            <polyline points='184 112 328 256 184 400' style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+        </symbol>
+    </svg>
+    
+    <div class="support">
+        <a href="https://twitter.com/DevLoop01" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        <a href="https://dribbble.com/devloop01" target="_blank"><i class="fab fa-dribbble"></i></a>
+    </div>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/CSSRulePlugin.min.js" integrity="sha512-SuKlyVGK9c7adN5I0qO0zZt1KAXK9WpUguwgH16A3s8Wvrc1X3mum4PS9bI7223Y2v5KBzx3qTCdlVymgF0uWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/CSSRulePlugin.min.js" integrity="sha512-SuKlyVGK9c7adN5I0qO0zZt1KAXK9WpUguwgH16A3s8Wvrc1X3mum4PS9bI7223Y2v5KBzx3qTCdlVymgF0uWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/Draggable.min.js" integrity="sha512-oyWYNZUIND9zR+4y3rkS7H+gOlqV/iuSJtpnz0sds9CtoQuUy2Z/hBIu7CXpyre8lVojuBClT7Hi3Hzd9hERYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/EasePack.min.js" integrity="sha512-ukWvHDJleXRIN1gHv7mMhdGIyD5RaHa0sVnNKFGZd0t7848OMtHB3vSyOk3/fqyRCgKm9wWGjUJ8V8cmou7JVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/EaselPlugin.min.js" integrity="sha512-TBHaEQ3HzvDJLCesS4/wBd7uyBvmDD7UYl69QNZoTroJLZpU5rdv0e5TZuL7o8tozTzc7JVxWCJnskwLlYfOSQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/MotionPathPlugin.min.js" integrity="sha512-TCWIV57O10riZ8jjGxGdx7BNNGydl57F4y8+EIK8szMou/flyNCRogOhFIMEDmD7NuAsfWoraH2VNAwHq7aFrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/PixiPlugin.min.js" integrity="sha512-+A/mqIoQVL9sh8gIUWMBHf2uIuscqtwbvi8yU0y1y/UTt8ilhm/huqZNKWO5Xwf0nWjmXoEx1Fm+J7RfJiJNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js" integrity="sha512-1OG9UO4krPizjtz/c9iDbjCqtXznBYdJeD4ccPaYfJHzC6F1qoQ3P1bgQ3J8lgCoK5qGVCqsY4+/RKjLDzITVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/TextPlugin.min.js" integrity="sha512-yVNhaX0I/lk5GtKya9lE27DopFWV791zsCnMpztLnGJgWESdN825wbH0/I1HfwdNgAKFsq9pXv5vpXjTAU7h3A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js" integrity="sha512-DlTk2PLUinhBupE89kHOJTt11QqbRMQVlbb26XVDvp4D1kt0fRvQJslvZnTelRJHq6yK0tIPCR7cul8+9Blz0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
+</body>
+</html>
